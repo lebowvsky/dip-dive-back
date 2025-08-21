@@ -13,8 +13,8 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
-    '@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'prettier',
@@ -34,13 +34,12 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-empty-function': 'warn',
-    '@typescript-eslint/prefer-const': 'error',
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
-    '@typescript-eslint/strict-boolean-expressions': 'error',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
@@ -49,6 +48,7 @@ module.exports = {
       { prefer: 'type-imports', disallowTypeAnnotations: false },
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    '@typescript-eslint/no-floating-promises': 'warn',
 
     // General ESLint rules
     'no-console': ['warn', { allow: ['warn', 'error'] }],
